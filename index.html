@@ -62,7 +62,20 @@ type="text/css" />
             font-weight: 700;
         }
 
-        .expander a {
+        ul {
+            list-style-type: none;
+        }
+
+        .expander {
+
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .expanderthumb {
+            font-size: 0.75em;
+            vertical-align: middle;
         }
 
         .horizontal {
@@ -81,9 +94,12 @@ type="text/css" />
             $('.expander').each(function() {
                 var header = $(this).children('.expanderheader');
                 var body = $(this).children('.expanderbody');
+                var thumb = $(this).children('.expanderthumb');
                 body.hide();
                 header.on("click", function(e) {
-                    body.toggle(600);
+                    body.toggle(600, function() {
+                        thumb.html(body.is(':visible') ? '[&ndash;]' : '[+]');
+                    });
                     e.preventDefault();
                 });
             });
@@ -106,7 +122,7 @@ type="text/css" />
         <div id="splitter"></div>
     </div>
 
-    <div class="centered">
+    <div class="centered" style="padding: 20px;">
         <ul class="horizontal">
             <li><a href="http://blog.functorial.com">Blog</a></li>
             <li><a href="http://twitter.com/paf31">Twitter</a></li>
@@ -134,6 +150,7 @@ type="text/css" />
 Present</li>
 
             <li class="expander">
+                <span class="expanderthumb">[+]</span>
                 <a href="#" class="expanderheader"><strong>Nowcom Corporation</strong> <em>Senior 
 
 Software Engineer</em> 2010-2012</a>
@@ -149,6 +166,7 @@ RIA Services, Entity Framework, Reactive Extensions, Javascript, REST.</li>
             </li>
 
             <li class="expander">
+                <span class="expanderthumb">[+]</span>
                 <a href="#" class="expanderheader"><strong>Candelis, Inc.</strong> <em>Software 
 
 Engineer</em> 2008-2010</a>
@@ -184,6 +202,7 @@ the existing approach to garbage collection with soft in-memory caches.</li>
 
         <ul>
             <li class="expander">
+                <span class="expanderthumb">[+]</span>
                 <a href="#" class="expanderheader"><strong>Cambridge University</strong> 
 
 <em>Mathematics MMath</em>, 2007-2008</a>
@@ -196,9 +215,10 @@ Theory, Set Theory and Logic, The X-ray Transform in Geometry and Dynamics</li>
             </li>
 
             <li class="expander">
+                <span class="expanderthumb">[+]</span>
                 <a href="#" class="expanderheader"><strong>Cambridge University</strong> 
 
-<em>Mathematics BA</em>, 2004-2007, First Class</a>
+<em>Mathematics BA</em>, 2004-2007</a>
                 <ul class="expanderbody">
                     <li>First Class with Honors</li>
                     <li>Consistently ranked 5th in class each year</li>
