@@ -104,18 +104,18 @@ type="text/css" />
                     if (!body.is(':visible')) {
                         $('.expander').each(function() {
                             var _this2 = $(this);
-                            _this2.find('.expanderbody').fadeOut(600, function() {
+                            _this2.find('.expanderbody').animate({ "height": "hide", "opacity": "hide" }, 600, function() {
                                 _this2.find('.expanderthumb').html('[+]');
                             });
                         });
 
-                        body.fadeIn(600, function() {
+                        body.animate({ "height": "show", "opacity": "show" }, 600, function() {
                             thumb.html('[&ndash;]');
                         });
     
                         e.preventDefault();
                     } else {
-                        body.fadeOut(600, function() {
+                        body.animate({ "height": "hide", "opacity": "hide" }, 600, function() {
                             thumb.html('[+]');
                         });
                     }
