@@ -93,20 +93,28 @@ type="text/css" />
     <script language="javascript">
         $(function() {
             $('.expander').each(function() {
-                var header = $(this).children('.expanderheader');
-                var body = $(this).children('.expanderbody');
-                var thumb = $(this).children('.expanderthumb');
+                var _this1 = $(this);
+                var header = _this1.find('.expanderheader');
+                var body = _this1.find('.expanderbody');
+                var thumb = _this1.find('.expanderthumb');
+
                 body.hide();
+
                 header.on("click", function(e) {
-                    $('.expander .expanderbody').each(function() {
-                        $(this).hide(600); 
-                    });
+                    if (!body.is(':visible')) {
+                        $('.expander').each(function() {
+                            var _this2 = $(this);
+                            _this2.find('.expanderbody').hide(600, function() {
+                                _this2.find('.expanderthumb').html(body.is(':visible') ? '[&ndash;]' : '[+]');
+                            });
+                        });
 
-                    body.show(600, function() {
-                        thumb.html(body.is(':visible') ? '[&ndash;]' : '[+]');
-                    });
-
-                    e.preventDefault();
+                        body.show(600, function() {
+                            thumb.html(body.is(':visible') ? '[&ndash;]' : '[+]');
+                        });
+    
+                        e.preventDefault();
+                    }
                 });
             });
         });
