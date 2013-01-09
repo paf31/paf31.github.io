@@ -97,8 +97,11 @@ type="text/css" />
                 var body = $(this).children('.expanderbody');
                 var thumb = $(this).children('.expanderthumb');
                 body.hide();
+                $('.expander .expanderbody').each(function() {
+                    $(this).hide(600); 
+                });
                 header.on("click", function(e) {
-                    body.toggle(600, function() {
+                    body.show(600, function() {
                         thumb.html(body.is(':visible') ? '[&ndash;]' : '[+]');
                     });
                     e.preventDefault();
@@ -284,7 +287,7 @@ Measure, Statistics, Optimization, Numerical Analysis, Dynamical Systems</li>
                 <span class="expanderthumb">[+]</span>
                 <a href="#" class="expanderheader"><strong>dcmutils</strong></a>
                 <ul class="expanderbody">
-                    <li>A library used for working with file in the DICOM file format (<a href="https://github.com/paf31/dcmutils" target="_blank">GitHub</a>)</li>
+                    <li>A library used for working with files in the DICOM file format (<a href="https://github.com/paf31/dcmutils" target="_blank">GitHub</a>)</li>
                 </ul>
             </li>
 
