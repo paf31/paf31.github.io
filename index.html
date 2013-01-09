@@ -105,7 +105,7 @@ type="text/css" />
                         $('.expander').each(function() {
                             var _this2 = $(this);
                             _this2.find('.expanderbody').hide(600, function() {
-                                _this2.find('.expanderthumb').html(body.is(':visible') ? '[&ndash;]' : '[+]');
+                                _this2.find('.expanderthumb').html(_this2.find('.expanderbody').is(':visible') ? '[&ndash;]' : '[+]');
                             });
                         });
 
