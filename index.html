@@ -97,13 +97,15 @@ type="text/css" />
                 var body = $(this).children('.expanderbody');
                 var thumb = $(this).children('.expanderthumb');
                 body.hide();
-                $('.expander .expanderbody').each(function() {
-                    $(this).hide(600); 
-                });
                 header.on("click", function(e) {
+                    $('.expander .expanderbody').each(function() {
+                        $(this).hide(600); 
+                    });
+
                     body.show(600, function() {
                         thumb.html(body.is(':visible') ? '[&ndash;]' : '[+]');
                     });
+
                     e.preventDefault();
                 });
             });
