@@ -127,13 +127,13 @@ type="text/css" />
                         body.animate({ "height": "show", "opacity": "show" }, 600, function() {
                             thumb.html('[&ndash;]');
                         });
-    
-                        e.preventDefault();
                     } else {
                         body.animate({ "height": "hide", "opacity": "hide" }, 600, function() {
                             thumb.html('[+]');
                         });
                     }
+    
+                    e.preventDefault();
                 });
             });
         });
