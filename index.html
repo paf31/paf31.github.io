@@ -1,591 +1,472 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Phil Freeman</title>
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <style>
-            body {
-    font-family: 'Lato';
-    background: #F0F0F0;
-    color: #333;
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>Phil Freeman</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+	
+	<style type="text/css">
+	@import url(
+	http://fonts.googleapis.com/css?family=Lato:400,700
+);
+body {
+	background: #fff;
+	font-family: Lato, sans-serif;
+	margin: 0 0 80px;
 }
-
-.main {
-	padding: 5px;
+a {
+	color: #2ecc71;
 }
-
-.card {
-	background: white;
-	border: 1px solid #E6E6E6;
-    border-radius: 3px;
-    min-height: 300px;
-    padding: 10px;
-}
-
-.card-nested {
-    min-height: 0;
-    margin-bottom: 10px;
-    border-width: 1px 0 0 0;
-}
-
-.card-work-experience:last-child {
-    margin-bottom: 0;
-}
-
-.background-card {
-    padding: 10px 20px;
-}
-
-.card-wrapper {
-    padding: 5px;
-}
-
-.profile-pic {
-    padding: 20px 0;
-}
-
-.text-bolder {
-    font-weight: bold;
-}
-
-.contact-details .detail {
-    display: table;
-    padding: 10px 0;
-}
-
-.contact-details .detail .icon {
-    padding: 0 10px;
-    color: #707070;
-}
-
-.contact-details .detail .icon, .contact-details .detail .info {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.contact-details .detail .info{
-	font-size: 0.8em;
-}
-
-.social-link {
-	margin-left: 5px;
-}
-
-.social-link:first-child {
-	margin-left: 0;
-}
-
-.social-link:hover {
+a:focus,
+a:hover {
+	color: #f1c40f;
 	text-decoration: none;
 }
-
-.link-github {
-	color: #454545;
+p {
+	line-height: 1.5;
+	margin: 0;
+}
+p + p {
+	margin-top: 10px;
+}
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0
+}
+section {
+	margin-top: 30px;
+}
+li {
+	line-height: 1.8;
+	list-style: none;
+}
+li:before {
+	content: "\f052";
+	float: left;
+	font: 13px Octicons;
+	margin-top: 6px;
+	margin-left: -20px;
+	opacity: .1;
+	position: absolute;
+}
+blockquote {
+	border-left: 5px solid #e7e9ec;
+	font-size: 14px;
+}
+em {
+	color: #95a5a6;
+	font-weight: normal;
+	font-style: normal;
+}
+h4 span:first-child {
+	color: #000;
+	font-weight: bold;
+}
+.container {
+	max-width: 750px;
+	padding: 0 30px;
+}
+.col-sm-6 {
+	margin-bottom: 10px;
+}
+.col-sm-12 h4 {
+	margin-top: 12px; 
+}
+.col-sm-12 + .col-sm-12 {
+	margin-top: 30px;
+}
+#header {
+	background: #f4f6f6;
+	padding: 50px 0;
+	margin-bottom: 30px;
+}
+#header h2 {
+	color: #95a5a6;
+	font-size: 24px;
+}
+#content h3 {
+	color: #f1c40f;
+	font-size: 26px;
+	margin-top: -4px;
+}
+#content aside {
+	text-align: right;
+	padding-right: 30px;
+}
+#profiles .network {
+	text-transform: capitalize;
+}
+#work .position,
+#volunteer .position {
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+#education .area {
+	font-weight: bold;
+}
+#education .area:before {
+	content: "\f0d7";
+	font: 16px Octicons;
+	margin-right: 6px;
+}
+#education .studyType {
+	margin-left: 25px;
+}
+#awards .summary,
+#publications .summary {
+	margin-top: 8px;
+}
+#publications .website a:before {
+	content: attr(href);
 }
 
-.link-github:hover {
-    color: black;
+@media (min-width: 480px) {
+	.strike-through {
+		border-top: 1px solid #f4f6f6;
+		height: 20px;
+		margin-top: 12px;
+		margin-bottom: -2px;
+		position: relative;
+	}
+	.strike-through span,
+	.strike-through a {
+		background: #fff;
+		position: absolute;
+	}
+	.strike-through span:first-child {
+		padding-right: 20px;
+		margin-top: -12px;
+	}
+	.strike-through span + span {
+		font-size: 14px;
+		margin-top: -10px;
+		padding-left: 20px;
+		right: 0;
+	}
+}
+@media (max-width: 768px) {
+	.col-sm-6:last-child {
+		margin-bottom: 0px;
+	}
+	#content aside {
+		margin-bottom: 20px;
+		padding-right: 0;
+		text-align: left;
+	}
+	#publications .website a:before {
+		content: "View publication";
+	}
+}
+@media (max-width: 480px) {
+	h1 {
+		font-size: 26px;
+	}
+	.date {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	.strike-through span:first-child {
+		margin-bottom: 7px;
+	}
+	.strike-through span {
+		display: block;
+	}	
+	#header {
+		margin-bottom: 10px;
+		padding: 40px 0;
+	}
+	#actions {
+		display: none;
+	}
 }
 
-.link-twitter {
-    color: #33CCFF;
-}
+	</style>
+	
+	</head>
+	<body>
+	
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9 col-sm-push-3">
+					<h1>
+						Phil Freeman
+					</h1>
+					<h2>
+						Programmer
+					</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="content" class="container">
 
-.link-blog {
-	color: rgb(243, 111, 36);
-}
+	<section id="contact" class="row">
+		<aside class="col-sm-3">
+			<h3>Contact</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<strong>Email</strong>
+				<div class="email">paf31@cantab.net</div>
+			</div>
+			<div class="col-sm-6">
+				<strong>Website</strong>
+				<div class="website">
+					<a href="http://functorial.com">http://functorial.com</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section id="about" class="row">
+		<aside class="col-sm-3">
+			<h3>About</h3>
+		</aside>
+		<div class="col-sm-9">
+			<p>Full-stack developer working with functional programming languages.</p>
+		</div>
+	</section>
+	<section id="profiles" class="row">
+		<aside class="col-sm-3">
+			<h3>Profiles</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-sm-6">
+					<strong class="network">
+						Twitter
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="http://twitter.com/paf31">paf31</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<strong class="network">
+						GitHub
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="http://github.com/paf31">paf31</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-.link-blog:hover {
-	color: rgb(211, 97, 32);
-}
+	<section id="work" class="row">
+		<aside class="col-sm-3">
+			<h3>Work</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>DICOM Grid</span>
+					<span class="date">
+						2013-05-01 — 
+					</span>
+				</h4>
+				<div class="position">
+					Sr. Software Engineer
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Implemented the DG zero-footprint radiology viewing application.</li>
+					<li class="bullet">Rearchitected web services for scalability and fault-tolerance.</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Cornerstone OnDemand</span>
+					<span class="date">
+						2012-09-01 — 2013-05-01
+					</span>
+				</h4>
+				<div class="position">
+					Sr. Software Engineer
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Developed a horizontally-scalable autocompletion web service, incorporating complex business rules, and designed to scale to thousands of requests per node per second.</li>
+					<li class="bullet">Developed a SQL library and accompanying strongly-typed DAO layer using F# and C#.</li>
+					<li class="bullet">Prototyped a HTML rendering engine using ahead-of-time compilation for performance.</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Nowcom Corporation</span>
+					<span class="date">
+						2010-07-01 — 2012-09-01
+					</span>
+				</h4>
+				<div class="position">
+					Senior Software Engineer II
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Developed a reusable graphical query designer, query backend and administration tool.</li>
+					<li class="bullet">Implemented a DSL and associated tools to execute in-app training scripts.</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Candelis Inc.</span>
+					<span class="date">
+						2008-10-01 — 2010-09-01
+					</span>
+				</h4>
+				<div class="position">
+					Software Engineer
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Developed a web-based DICOM medical image viewer.</li>
+					<li class="bullet">Development Lead for the Candelis-Siemens RT Review oncologist review workstation, including 2D and 3D image registration, dose and beam review.</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
 
-.background-details .detail {
-	display: table;
-	padding: 10px 0;
-}
+	
+	<section id="education" class="row">
+		<aside class="col-sm-3">
+			<h3>Education</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>University of Cambridge</span>
+					<span class="date">
+						2004-09-01 — 2008-07-01
+					</span>
+				</h4>
+				<div class="area">
+					Mathematics
+				</div>
+				<div class="studyType">
+					BA, MA, MMath
+				</div>
+				<h4>Courses</h4>
+				<ul class="courses">
+					<li>Algebraic Topology</li>
+					<li>Set Theory and Logic</li>
+					<li>Galois Theory</li>
+					<li>Representation Theory</li>
+					<li>Linear Analysis</li>
+					<li>Riemann Surfaces</li>
+					<li>Differential Geometry</li>
+					<li>Probability and Measure</li>
+					<li>Statistics</li>
+					<li>Optimization</li>
+					<li>Numerical Analysis</li>
+					<li>Dynamical Systems</li>
+					<li>Spectral Geometry</li>
+					<li>Complex Manifolds</li>
+					<li>Category Theory</li>
+					<li>Anosov Flows</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<section id="publications" class="row">
+		<aside class="col-sm-3">
+			<h3>Publications</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>PureScript By Example</span>
+					<span class="date">
+						2014-08-01
+					</span>
+				</h4>
+				<div class="website pull-right">
+					<a href="http://leanpub.com/purescript"></a>
+				</div>
+				<div class="publisher">
+					<em>Published by</em>
+					<strong>LeanPub</strong>
+				</div>
+				<div class="summary">
+					<p>A book designed for JavaScript developers to learn functional programming for the web in a hands-on way using the PureScript programming language.</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	
+	<section id="skills" class="row">
+		<aside class="col-sm-3">
+			<h3>Skills</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>JVM</h4>
+				</div>
+				<ul class="keywords">
+					<li>Scala</li>
+					<li>Java</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>.NET</h4>
+				</div>
+				<ul class="keywords">
+					<li>C#</li>
+					<li>F#</li>
+					<li>LINQ</li>
+					<li>Azure</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Front-end</h4>
+				</div>
+				<ul class="keywords">
+					<li>TypeScript</li>
+					<li>JavaScript</li>
+					<li>HTML5</li>
+					<li>CSS</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Other</h4>
+				</div>
+				<ul class="keywords">
+					<li>Haskell</li>
+					<li>OpenGL</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
 
-.background-details .detail .icon {
-	min-width: 45px;
-	max-width: 45px;
-	text-align: center;
-}
 
-.background-details .detail .title, .background-details .detail .icon {
-	color: # 707070;
-}
+	
 
-.background-details .detail .icon,
-.background-details .detail .info {
-    display: table-cell;
-    padding: 0 10px;
-}
-
-.background-details .detail .info {
-    width: 100% ;
-}
-
-.timeline-circle {
-    width: 10px;
-    height: 10px;
-    border: 2px solid #e2e2e2;
-    border-radius: 50% ;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.timeline-content {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.clear-margin {
-    margin: 0;
-}
-
-.space-top {
-    margin-top: 10px;
-}
-
-.info .content.has-sidebar {
-    width: 80% ;
-    box-sizing: border-box;
-    float: left;
-    padding: 0 10px;
-}
-
-.info .sidebar {
-    margin-left: 80% ;
-    box-sizing: border-box;
-    padding: 10px;
-    border-left: 1px solid #ccc;
-}
-
-        </style>
-    </head>
-
-    <body>
-        <script>
-            window.onload = function () {
-                $(".background-card").css( "min-height", window.screen.availHeight + "px" );
-            }
-        </script>
-        <div class="container-fluid">
-            <div class="row main clearfix">
-                <section class="col-md-3 card-wrapper affix">
-                    <div class="card profile-card">
-                        <div class="profile-pic">
-                            <img class="media-object img-circle center-block"  data-src="holder.js/64x64"
-                                alt="64x64" src="http://www.gravatar.com/avatar/cbed6f201f9a0e735e5660d118c6662d?s=100&amp;r=pg&amp;d=mm" style="width: 100px; height: 100px;">
-                        </div>
-                        
-                            <h3 class="text-center text-bolder"> Phil Freeman</h3>
-                            <h5 class="text-muted text-center">Programmer</h5>
-                            <hr>
-
-                            <div class="contact-details clearfix">
-
-                                
-                                    <div class="detail">
-                                        <span class="icon">
-                                            <i class="fa fa-lg fa-location-arrow"></i>
-                                        </span>
-
-                                        
-                                            <span class="info">
-                                                Los Angeles, California,
-                                                US
-                                            </span>
-                                        
-                                    </div>
-                                
-
-                                
-
-                                
-                                    <div class="detail">
-                                        <span class="icon">
-                                            <i class="fa fa-lg fa-envelope"></i>
-                                        </span>
-
-                                        <span class="info">
-                                            paf31@cantab.net
-                                        </span>
-                                    </div>
-                                
-
-                                
-                            </div>
-
-                            <hr>
-
-                            <div class="social-links text-center">
-                                
-                                    <a class="fa fa-github fa-2x social-link link-github"
-                                           href="http://www.github.com/paf31" target="_blank"></a>
-                                
-                                
-                                    <a class="fa fa-twitter fa-2x social-link link-twitter"
-                                           href="http://www.twitter.com/paf31" target="_blank"></a>
-                                
-                                
-                                    <a class="fa fa-rss fa-2x social-link link-blog"
-                                           href="http://functorial.com" target="_blank"></a>
-                                
-                            </div>
-                        
-                    </div>
-                </section>
-
-                <section class="col-md-9 card-wrapper pull-right">
-                    <div class="card background-card">
-                        <h4 class="text-uppercase text-bolder">Background</h4>
-                        <hr>
-
-                        <div class="background-details">
-                            <div class="detail">
-                                <div class="icon">
-                                    <i class="fa fa-lg fa-user"></i>
-                                </div>
-                                <div class="info">
-                                    <h4 class="title text-uppercase">
-                                        About
-                                    </h4>
-
-                                    <div class="content">
-                                        Full-stack developer working with functional programming languages.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="detail">
-                                <div class="icon">
-                                    <i class="fa fa-lg fa-building"></i>
-                                </div>
-                                <div class="info">
-                                    <h4 class="title text-uppercase">
-                                        Work Experience
-                                    </h4>
-
-                                    <ul class="list-unstyled">
-                                        
-                                            <li class="card card-nested clearfix">
-                                                <div class="content has-sidebar">
-                                                    <p><strong>Sr. Software Engineer</strong>,&nbsp;DICOM Grid</p>
-                                                    <p></p>
-                                                    
-                                                        <ul>
-                                                            
-                                                                <li> Implemented the DG zero-footprint radiology viewing application. </li>
-                                                            
-                                                                <li> Rearchitected web services for scalability and fault-tolerance. </li>
-                                                            
-                                                        </ul>
-                                                    
-                                                </div>
-
-                                                <div class="sidebar text-muted text-center">
-                                                    <p>
-                                                        <strong>Joined:</strong>&nbsp;
-                                                        Apr, 2013
-                                                    </p>
-                                                    <p>
-                                                        
-                                                            <span class="label label-success">
-                                                                Currently Working
-                                                            </span>
-                                                        
-                                                    </p>
-                                                    <p>
-                                                        (1 year 3 months)
-                                                    </p>
-                                                </div>
-                                            </li>
-                                        
-                                            <li class="card card-nested clearfix">
-                                                <div class="content has-sidebar">
-                                                    <p><strong>Sr. Software Engineer</strong>,&nbsp;Cornerstone OnDemand</p>
-                                                    <p></p>
-                                                    
-                                                        <ul>
-                                                            
-                                                                <li> Developed a horizontally-scalable autocompletion web service, incorporating complex business rules, and designed to scale to thousands of requests per node per second. </li>
-                                                            
-                                                                <li> Developed a SQL library and accompanying strongly-typed DAO layer using F# and C#. </li>
-                                                            
-                                                                <li> Prototyped a HTML rendering engine using ahead-of-time compilation for performance. </li>
-                                                            
-                                                        </ul>
-                                                    
-                                                </div>
-
-                                                <div class="sidebar text-muted text-center">
-                                                    <p>
-                                                        <strong>Joined:</strong>&nbsp;
-                                                        Aug, 2012
-                                                    </p>
-                                                    <p>
-                                                        
-                                                            <strong>Left:</strong>&nbsp;
-                                                            Apr, 2013
-                                                        
-                                                    </p>
-                                                    <p>
-                                                        (8 months)
-                                                    </p>
-                                                </div>
-                                            </li>
-                                        
-                                            <li class="card card-nested clearfix">
-                                                <div class="content has-sidebar">
-                                                    <p><strong>Senior Software Engineer II</strong>,&nbsp;Nowcom Corporation</p>
-                                                    <p></p>
-                                                    
-                                                        <ul>
-                                                            
-                                                                <li> Developed a reusable graphical query designer, query backend and administration tool. </li>
-                                                            
-                                                                <li> Implemented a DSL and associated tools to execute in-app training scripts. </li>
-                                                            
-                                                        </ul>
-                                                    
-                                                </div>
-
-                                                <div class="sidebar text-muted text-center">
-                                                    <p>
-                                                        <strong>Joined:</strong>&nbsp;
-                                                        Jun, 2010
-                                                    </p>
-                                                    <p>
-                                                        
-                                                            <strong>Left:</strong>&nbsp;
-                                                            Aug, 2012
-                                                        
-                                                    </p>
-                                                    <p>
-                                                        (2 years 2 months)
-                                                    </p>
-                                                </div>
-                                            </li>
-                                        
-                                            <li class="card card-nested clearfix">
-                                                <div class="content has-sidebar">
-                                                    <p><strong>Software Engineer</strong>,&nbsp;Candelis Inc.</p>
-                                                    <p></p>
-                                                    
-                                                        <ul>
-                                                            
-                                                                <li> Developed a web-based DICOM medical image viewer. </li>
-                                                            
-                                                                <li> Development Lead for the Candelis-Siemens RT Review oncologist review workstation, including 2D and 3D image registration, dose and beam review. </li>
-                                                            
-                                                        </ul>
-                                                    
-                                                </div>
-
-                                                <div class="sidebar text-muted text-center">
-                                                    <p>
-                                                        <strong>Joined:</strong>&nbsp;
-                                                        Sep, 2008
-                                                    </p>
-                                                    <p>
-                                                        
-                                                            <strong>Left:</strong>&nbsp;
-                                                            Aug, 2010
-                                                        
-                                                    </p>
-                                                    <p>
-                                                        (1 year 11 months)
-                                                    </p>
-                                                </div>
-                                            </li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="detail">
-                                <div class="icon">
-                                    <i class="fa fa-lg fa-code"></i>
-                                </div>
-                                <div class="info">
-                                    <h4 class="title text-uppercase">
-                                        Skills
-                                    </h4>
-
-                                    <div class="content">
-                                        <ul class="list-unstyled">
-                                            
-                                                <li class="card card-nested">
-                                                    <strong>JVM</strong>
-
-                                                    <div class="space-top">
-                                                        
-                                                            <span class="label label-primary">Scala</span>
-                                                        
-                                                            <span class="label label-primary">Java</span>
-                                                        
-                                                    </div>
-                                                </li>
-                                            
-                                                <li class="card card-nested">
-                                                    <strong>.NET</strong>
-
-                                                    <div class="space-top">
-                                                        
-                                                            <span class="label label-primary">C#</span>
-                                                        
-                                                            <span class="label label-primary">F#</span>
-                                                        
-                                                            <span class="label label-primary">LINQ</span>
-                                                        
-                                                            <span class="label label-primary">Azure</span>
-                                                        
-                                                    </div>
-                                                </li>
-                                            
-                                                <li class="card card-nested">
-                                                    <strong>Front-end</strong>
-
-                                                    <div class="space-top">
-                                                        
-                                                            <span class="label label-primary">TypeScript</span>
-                                                        
-                                                            <span class="label label-primary">JavaScript</span>
-                                                        
-                                                            <span class="label label-primary">HTML5</span>
-                                                        
-                                                            <span class="label label-primary">CSS</span>
-                                                        
-                                                    </div>
-                                                </li>
-                                            
-                                                <li class="card card-nested">
-                                                    <strong>Other</strong>
-
-                                                    <div class="space-top">
-                                                        
-                                                            <span class="label label-primary">Haskell</span>
-                                                        
-                                                            <span class="label label-primary">OpenGL</span>
-                                                        
-                                                    </div>
-                                                </li>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="detail">
-                                <div class="icon">
-                                    <i class="fa fa-lg fa-mortar-board"></i>
-                                </div>
-                                <div class="info">
-                                    <h4 class="title text-uppercase">
-                                        Education
-                                    </h4>
-
-                                    <div class="content">
-                                        <ul class="list-unstyled">
-                                            
-                                                <li class="card card-nested">
-                                                    <p>
-                                                        <strong>Mathematics, BA, MA, MMath</strong>,&nbsp;
-                                                        University of Cambridge
-                                                        <small class="text-muted pull-right">
-                                                            2004-09-01 - 2008-07-01
-                                                        </small>
-                                                    </p>
-                                                    <div class="space-top">
-                                                        
-                                                            <span class="label label-primary">Algebraic Topology</span>
-                                                        
-                                                            <span class="label label-primary">Set Theory and Logic</span>
-                                                        
-                                                            <span class="label label-primary">Galois Theory</span>
-                                                        
-                                                            <span class="label label-primary">Representation Theory</span>
-                                                        
-                                                            <span class="label label-primary">Linear Analysis</span>
-                                                        
-                                                            <span class="label label-primary">Riemann Surfaces</span>
-                                                        
-                                                            <span class="label label-primary">Differential Geometry</span>
-                                                        
-                                                            <span class="label label-primary">Probability and Measure</span>
-                                                        
-                                                            <span class="label label-primary">Statistics</span>
-                                                        
-                                                            <span class="label label-primary">Optimization</span>
-                                                        
-                                                            <span class="label label-primary">Numerical Analysis</span>
-                                                        
-                                                            <span class="label label-primary">Dynamical Systems</span>
-                                                        
-                                                            <span class="label label-primary">Spectral Geometry</span>
-                                                        
-                                                            <span class="label label-primary">Complex Manifolds</span>
-                                                        
-                                                            <span class="label label-primary">Category Theory</span>
-                                                        
-                                                            <span class="label label-primary">Anosov Flows</span>
-                                                        
-                                                    </div>
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-
-                            
-
-                            
-                                <div class="detail">
-                                    <div class="icon">
-                                        <i class="fa fa-lg fa-book"></i>
-                                    </div>
-                                    <div class="info">
-                                        <h4 class="title text-uppercase">
-                                            Publications
-                                        </h4>
-
-                                        <div class="content">
-                                            <ul class="list-unstyled">
-                                                
-                                                    <li class="card card-nested">
-                                                        <p>
-                                                            <strong>PureScript By Example</strong>,&nbsp;
-                                                            LeanPub
-                                                            <small class="pull-right text-muted">
-                                                                2014-08-01
-                                                            </small>
-                                                        </p>
-                                                        <p class="clear-margin">A book designed for JavaScript developers to learn functional programming for the web in a hands-on way using the PureScript programming language.</p>
-                                                    </li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-
-                            
-
-                            
-
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    </body>
+	</div>
+	
+	</body>
 </html>

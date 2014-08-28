@@ -28,7 +28,6 @@
     {
       "company": "DICOM Grid",
       "position": "Sr. Software Engineer",
-      "website": "http://dicomgrid.com",
       "startDate": "2013-05-01",
       "highlights": [
         "Implemented the DG zero-footprint radiology viewing application.",
@@ -38,7 +37,6 @@
     {
       "company": "Cornerstone OnDemand",
       "position": "Sr. Software Engineer",
-      "website": "http://csod.com",
       "startDate": "2012-09-01",
       "endDate": "2013-05-01",
       "highlights": [
@@ -50,7 +48,6 @@
     {
       "company": "Nowcom Corporation",
       "position": "Senior Software Engineer II",
-      "website": "http://nowcom.com",
       "startDate": "2010-07-01",
       "endDate": "2012-09-01",
       "highlights": [
@@ -61,7 +58,6 @@
     {
       "company": "Candelis Inc.",
       "position": "Software Engineer",
-      "website": "http://candelis.com",
       "startDate": "2008-10-01",
       "endDate": "2010-09-01",
       "highlights": [ 
