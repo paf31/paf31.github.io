@@ -5,6 +5,10 @@ body {
     margin: 0;
 }
 
+body > * {
+    padding: 10px;
+}
+
 h1 {
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     font-family: 'Roboto Slab';
