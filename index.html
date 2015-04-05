@@ -1,472 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
-	<title>Phil Freeman</title>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-	
-	<style type="text/css">
-	@import url(
-	http://fonts.googleapis.com/css?family=Lato:400,700
-);
-body {
-	background: #fff;
-	font-family: Lato, sans-serif;
-	margin: 0 0 80px;
-}
-a {
-	color: #2ecc71;
-}
-a:focus,
-a:hover {
-	color: #f1c40f;
-	text-decoration: none;
-}
-p {
-	line-height: 1.5;
-	margin: 0;
-}
-p + p {
-	margin-top: 10px;
-}
-h1,
-h2,
-h3,
-h4 {
-	margin-top: 0
-}
-section {
-	margin-top: 30px;
-}
-li {
-	line-height: 1.8;
-	list-style: none;
-}
-li:before {
-	content: "\f052";
-	float: left;
-	font: 13px Octicons;
-	margin-top: 6px;
-	margin-left: -20px;
-	opacity: .1;
-	position: absolute;
-}
-blockquote {
-	border-left: 5px solid #e7e9ec;
-	font-size: 14px;
-}
-em {
-	color: #95a5a6;
-	font-weight: normal;
-	font-style: normal;
-}
-h4 span:first-child {
-	color: #000;
-	font-weight: bold;
-}
-.container {
-	max-width: 750px;
-	padding: 0 30px;
-}
-.col-sm-6 {
-	margin-bottom: 10px;
-}
-.col-sm-12 h4 {
-	margin-top: 12px; 
-}
-.col-sm-12 + .col-sm-12 {
-	margin-top: 30px;
-}
-#header {
-	background: #f4f6f6;
-	padding: 50px 0;
-	margin-bottom: 30px;
-}
-#header h2 {
-	color: #95a5a6;
-	font-size: 24px;
-}
-#content h3 {
-	color: #f1c40f;
-	font-size: 26px;
-	margin-top: -4px;
-}
-#content aside {
-	text-align: right;
-	padding-right: 30px;
-}
-#profiles .network {
-	text-transform: capitalize;
-}
-#work .position,
-#volunteer .position {
-	font-weight: bold;
-	margin-bottom: 8px;
-}
-#education .area {
-	font-weight: bold;
-}
-#education .area:before {
-	content: "\f0d7";
-	font: 16px Octicons;
-	margin-right: 6px;
-}
-#education .studyType {
-	margin-left: 25px;
-}
-#awards .summary,
-#publications .summary {
-	margin-top: 8px;
-}
-#publications .website a:before {
-	content: attr(href);
-}
+  <head>
+    <title>Phil Freeman</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300|Roboto:400,700|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-center">Phil Freeman</h1>
+        
+        <hr/>
+        
+        <p class="lead text-center">Full-stack developer working with functional programming languages, living in Los Angeles, CA. I enjoy applying the techniques of pure functional programming to real-world problems.</p>
+    </div>  
+            
+    <section class="dark">
+        <div class="container">
+            <h2 class="text-center">Projects</h2>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <h3 class="text-center">PureScript Compiler</h3>
+                <p>I am the original designer of the <a href="http://purescript.org">PureScript</a> programming language and compiler. I implemented many of the compiler features and <a href="http://functorial.com/psc-pages/docs">core libraries</a>, and continue to work on new features.</p>
+              </div>
+              <div class="col-md-4">
+                <h3 class="text-center">PureScript By Example</h3>
+                <p>I wrote this <a href="http://leanpub.com/purescript/read">book</a> as an introduction to functional programming for Javascript developers. It covers many core FP concepts, providing real-world examples as motivation, including callback-based programming, canvas graphics and DOM templating.</p>
+              </div>
+              <div class="col-md-4">
+                <h3 class="text-center">mu-kanren</h3>
+                <p>This <a href="http://functorial.com/mu-kanren">teaching tool</a> allows developers to step through the evaluation of a MicroKanren program, observing values as unifications happen, for debugging purposes.</p>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <h3 class="text-center">24 Days of PureScript</h3>
+                <p>I wrote this <a href="https://gist.github.com/paf31/8e9177b20ee920480fbc">blog series</a> to highlight some of the activity in the PureScript developer community.</p>
+              </div>
+              <div class="col-md-4">
+                <h3 class="text-center">Try PureScript!</h3>
+                <p>This <a href="http://try.purescript.org/">web application</a> allows developers to try the PureScript programming language without installing the compiler. It compiles the user's code on the server, and executes it in an iframe.</p>
+              </div>
+              <div class="col-md-4">
+                <h3 class="text-center">Pursuit</h3>
+                <p><a href="http://pursuit.purescript.org">Pursuit</a> is a searchable database of PureScript library documentation. I implemented the original version of Pursuit, and continue to add features.</p>
+              </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2 class="text-center">Articles</h2>
+            
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="text-center">PureScript Tutorials</h3>
+                <p>Many of my PureScript articles can be found on the <a href="http://wiki.purescript.org/">PureScript wiki</a>.</p>
+                <ul>
+                    <li><a href="https://github.com/purescript/purescript/wiki/First-Steps-With-PureScript---Solving-Project-Euler-%231">First Steps With PureScript</a></li>
+                    <li><a href="https://github.com/purescript/purescript/wiki/Handling-Native-Effects-with-the-Eff-Monad">Handling Native Effects with the Eff Monad</a></li>
+                    <li><a href="https://github.com/purescript/purescript/wiki/Test-your-Javascript-with-QuickCheck">Test your Javascript with QuickCheck</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h3 class="text-center">Personal Blog</h3>
+                <p>Articles on Haskell, C#, type theory and functional programming can be found at <a href="http://blog.functorial.com/">my blog</a>.</p>
+                <ul>
+                    <li><a href="http://blog.functorial.com/posts/2013-10-27-Pretty-Printing-Arrows.html">Pretty Printing Arrows</a></li>
+                    <li><a href="http://blog.functorial.com/posts/2013-10-02-Visitor-Pattern.html">The Visitor Pattern and Pattern Matching</a></li>
+                    <li><a href="http://blog.functorial.com/posts/2013-05-23-Teaching-Haskell-To-Juggle.html">Teaching Haskell To Juggle</a>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="dark">
+        <div class="container">
+            <h2 class="text-center">Upcoming Talks</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="text-center">Node.DTLA</h3>
+                <p class="text-center"><strong>Web Programming with Class</strong></p>
+                <p>Type classes enable a style of programming in which we reason about correctness using <em>laws</em> and <em>equational reasoning</em>. In this talk, I will give an introduction to programming with type classes in PureScript, using real-world examples as motiviation.</p>
+              </div>
+              <div class="col-md-6">
+                <h3 class="text-center">LambdaConf 2015</h3>
+                <p class="text-center"><strong>Purely-Functional Web Apps using React and PureScript</strong></p>
+                <p>React has popularized the idea of user interfaces as pure functions of application state, an approach which is perfectly suited for a language like PureScript. In this workshop, we'll learn how to use React and PureScript to create clean, well-factored web applications.</p>
+              </div>
+            </div>
+            <h2 class="text-center">Previous Talks</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="text-center">LambdaConf 2014</h3>
+                <p class-"text-center"><strong>Learn Front-End Programming with PureScript</strong></p>
+                <p>I led a 90-minute workshop in which attendees learned to solve common problems in web programming using the PureScript programming language.</p>
+              </div>
+              <div class="col-md-6">
+                <h3 class="text-center">Strange Loop 2014 (Unsession)</h3>
+                <p>I led an <em>unsession</em> at Strange Loop 2014, covering some of the major features in PureScript, and future directions for PureScript and AltJS more generally.</p>
+              </div>
+            </div>
+        </div>
+    </section>
 
-@media (min-width: 480px) {
-	.strike-through {
-		border-top: 1px solid #f4f6f6;
-		height: 20px;
-		margin-top: 12px;
-		margin-bottom: -2px;
-		position: relative;
-	}
-	.strike-through span,
-	.strike-through a {
-		background: #fff;
-		position: absolute;
-	}
-	.strike-through span:first-child {
-		padding-right: 20px;
-		margin-top: -12px;
-	}
-	.strike-through span + span {
-		font-size: 14px;
-		margin-top: -10px;
-		padding-left: 20px;
-		right: 0;
-	}
-}
-@media (max-width: 768px) {
-	.col-sm-6:last-child {
-		margin-bottom: 0px;
-	}
-	#content aside {
-		margin-bottom: 20px;
-		padding-right: 0;
-		text-align: left;
-	}
-	#publications .website a:before {
-		content: "View publication";
-	}
-}
-@media (max-width: 480px) {
-	h1 {
-		font-size: 26px;
-	}
-	.date {
-		font-size: 14px;
-		margin-bottom: 5px;
-	}
-	.strike-through span:first-child {
-		margin-bottom: 7px;
-	}
-	.strike-through span {
-		display: block;
-	}	
-	#header {
-		margin-bottom: 10px;
-		padding: 40px 0;
-	}
-	#actions {
-		display: none;
-	}
-}
-
-	</style>
-	
-	</head>
-	<body>
-	
-	<header id="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-9 col-sm-push-3">
-					<h1>
-						Phil Freeman
-					</h1>
-					<h2>
-						Programmer
-					</h2>
-				</div>
-			</div>
-		</div>
-	</header>
-	<div id="content" class="container">
-
-	<section id="contact" class="row">
-		<aside class="col-sm-3">
-			<h3>Contact</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<strong>Email</strong>
-				<div class="email">paf31@cantab.net</div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Website</strong>
-				<div class="website">
-					<a href="http://functorial.com">http://functorial.com</a>
-				</div>
-			</div>
-			</div>
-		</div>
-	</section>
-	<section id="about" class="row">
-		<aside class="col-sm-3">
-			<h3>About</h3>
-		</aside>
-		<div class="col-sm-9">
-			<p>Full-stack developer working with functional programming languages.</p>
-		</div>
-	</section>
-	<section id="profiles" class="row">
-		<aside class="col-sm-3">
-			<h3>Profiles</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-				<div class="col-sm-6">
-					<strong class="network">
-						Twitter
-					</strong>
-					<div class="username">
-						<div class="url">
-							<a href="http://twitter.com/paf31">paf31</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<strong class="network">
-						GitHub
-					</strong>
-					<div class="username">
-						<div class="url">
-							<a href="http://github.com/paf31">paf31</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section id="work" class="row">
-		<aside class="col-sm-3">
-			<h3>Work</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>DICOM Grid</span>
-					<span class="date">
-						2013-05-01 — 
-					</span>
-				</h4>
-				<div class="position">
-					Sr. Software Engineer
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Implemented the DG zero-footprint radiology viewing application.</li>
-					<li class="bullet">Rearchitected web services for scalability and fault-tolerance.</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Cornerstone OnDemand</span>
-					<span class="date">
-						2012-09-01 — 2013-05-01
-					</span>
-				</h4>
-				<div class="position">
-					Sr. Software Engineer
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Developed a horizontally-scalable autocompletion web service, incorporating complex business rules, and designed to scale to thousands of requests per node per second.</li>
-					<li class="bullet">Developed a SQL library and accompanying strongly-typed DAO layer using F# and C#.</li>
-					<li class="bullet">Prototyped a HTML rendering engine using ahead-of-time compilation for performance.</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Nowcom Corporation</span>
-					<span class="date">
-						2010-07-01 — 2012-09-01
-					</span>
-				</h4>
-				<div class="position">
-					Senior Software Engineer II
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Developed a reusable graphical query designer, query backend and administration tool.</li>
-					<li class="bullet">Implemented a DSL and associated tools to execute in-app training scripts.</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>Candelis Inc.</span>
-					<span class="date">
-						2008-10-01 — 2010-09-01
-					</span>
-				</h4>
-				<div class="position">
-					Software Engineer
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Developed a web-based DICOM medical image viewer.</li>
-					<li class="bullet">Development Lead for the Candelis-Siemens RT Review oncologist review workstation, including 2D and 3D image registration, dose and beam review.</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
-
-	
-	<section id="education" class="row">
-		<aside class="col-sm-3">
-			<h3>Education</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>University of Cambridge</span>
-					<span class="date">
-						2004-09-01 — 2008-07-01
-					</span>
-				</h4>
-				<div class="area">
-					Mathematics
-				</div>
-				<div class="studyType">
-					BA, MA, MMath
-				</div>
-				<h4>Courses</h4>
-				<ul class="courses">
-					<li>Algebraic Topology</li>
-					<li>Set Theory and Logic</li>
-					<li>Galois Theory</li>
-					<li>Representation Theory</li>
-					<li>Linear Analysis</li>
-					<li>Riemann Surfaces</li>
-					<li>Differential Geometry</li>
-					<li>Probability and Measure</li>
-					<li>Statistics</li>
-					<li>Optimization</li>
-					<li>Numerical Analysis</li>
-					<li>Dynamical Systems</li>
-					<li>Spectral Geometry</li>
-					<li>Complex Manifolds</li>
-					<li>Category Theory</li>
-					<li>Anosov Flows</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
-	
-	
-	<section id="publications" class="row">
-		<aside class="col-sm-3">
-			<h3>Publications</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>PureScript By Example</span>
-					<span class="date">
-						2014-08-01
-					</span>
-				</h4>
-				<div class="website pull-right">
-					<a href="http://leanpub.com/purescript"></a>
-				</div>
-				<div class="publisher">
-					<em>Published by</em>
-					<strong>LeanPub</strong>
-				</div>
-				<div class="summary">
-					<p>A book designed for JavaScript developers to learn functional programming for the web in a hands-on way using the PureScript programming language.</p>
-				</div>
-			</div>
-			</div>
-		</div>
-	</section>
-	
-	<section id="skills" class="row">
-		<aside class="col-sm-3">
-			<h3>Skills</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>JVM</h4>
-				</div>
-				<ul class="keywords">
-					<li>Scala</li>
-					<li>Java</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>.NET</h4>
-				</div>
-				<ul class="keywords">
-					<li>C#</li>
-					<li>F#</li>
-					<li>LINQ</li>
-					<li>Azure</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Front-end</h4>
-				</div>
-				<ul class="keywords">
-					<li>TypeScript</li>
-					<li>JavaScript</li>
-					<li>HTML5</li>
-					<li>CSS</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Other</h4>
-				</div>
-				<ul class="keywords">
-					<li>Haskell</li>
-					<li>OpenGL</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
-
-
-	
-
-	</div>
-	
-	</body>
+    <div class="container">
+        <h3 class="text-center">
+            <a href="mailto:paf31@cantab.net"><i class="fa fa-envelope-square"></i></a>
+            <a href="www.linkedin.com/in/paf31"><i class="fa fa-linkedin-square"></i></a>
+            <a href="http://twitter.com/paf31"><i class="fa fa-twitter-square"></i></a>
+            <a href="http://github.com/paf31"><i class="fa fa-github-square"></i></a>
+        </h3>
+        <p class="text-center text-muted"><small>&copy; Phil Freeman 2015</small></p>
+    </div>
+  </body>
 </html>

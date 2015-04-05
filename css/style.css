@@ -1,0 +1,25 @@
+body {
+    background-color: #F7FDFF;  
+    font-family: 'Roboto'; 
+    color: #59656E;
+    margin: 0;
+}
+
+h1 {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto Slab';
+}
+
+h2, h3 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto Condensed';
+}
+
+.container {
+    padding: 25px 0;
+}
+
+.dark {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
