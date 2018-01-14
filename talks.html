@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Talks</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <header>
+      <h1>Talks</h1>
+      <p>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="writing.html">Writing</a>
+        Talks
+      </p>
+      <hr>
+    </header>
+    <main>
+      <h2>An Overview of the PureScript Type System</h2>
+      <p>(Los Angeles Haskell Group)</p>
+      <p>
+        <a href="https://speakerdeck.com/paf31/an-overview-of-the-purescript-type-system">Slides</a>
+        <a href="https://www.youtube.com/watch?v=SPpIbiZFPRY">Video</a>
+      </p>
+      <p>PureScript's type system has grown gradually over the past four years, driven by the need for solutions to real-world problems and also experimentation. This talk is an overview of the implementation of some of the type system features which were inspired by Haskell, and also some novel features such as row polymorphism.</p>
+
+      <h2>Stack Safety for Free</h2>
+      <p>(Code Mesh 2016)</p>
+      <p>
+        <a href="https://speakerdeck.com/paf31/stack-safety-for-free">Slides</a>
+        <a href="https://www.youtube.com/watch?v=OFzhfbPO9ds">Video</a>
+      </p>
+      <p>Recursion can run afoul of stack overflow errors if we are not careful to make our functions tail-recursive. But tail recursion is not enough if we want to use monadic recursion, or abstractions like free monads and free monad transformers. In this talk, I show how we are able to make these techniques safe in PureScript, a strict Haskell-like language that compiles to JavaScript.</p>
+
+      <h2>Fun with Profunctors</h2>
+      <p>(Los Angeles Haskell Group)</p>
+      <p>
+        <a href="https://speakerdeck.com/paf31/fun-with-profunctors">Slides</a>
+        <a href="https://www.youtube.com/watch?v=OJtGECfksds">Video</a>
+      </p>
+      <p>The Profunctor type class provides an alternative presentation of lenses and prisms. In this talk, I gave an introduction to profunctor optics and examples.</p>
+
+      <h2>Principal Type Schemes for Functional Programs</h2>
+      <p>(Papers We Love)</p>
+      <p>
+        <a href="https://speakerdeck.com/paf31/principal-type-schemes-for-functional-programs">Slides</a>
+        <a href="https://www.youtube.com/watch?v=zyyRxbGknNk">Video</a>
+      </p>
+      <p>The Damas-Hindley-Milner type system is a classical system for the first-order polymorphic lambda calculus, and the ML family of programming languages. This paper introduces Algorithm W, a simple algorithm for type reconstruction in the DHM type system. I'll walk through the main results of the paper, and compare the DHM type system with other more modern systems.</p>
+
+      <h2>Embedded DSLs in Haskell</h2>
+      <p>(Los Angeles Haskell Group)</p>
+      <p>
+        <a href="https://github.com/paf31/haskell-slides/tree/master/hoas">Slides</a>
+        <a href="https://www.youtube.com/watch?v=8DdyWgRYEeI">Video</a>
+      </p>
+      <p>Haskell is a great tool for prototyping languages and building compilers, with high-level abstractions that make parsing, type-checking, transformations and code generation very simple. However, we can avoid a lot of that work by creating an <em>embedded</em> language, inside Haskell. This talk shows some techniques that you might use for doing writing simple embedded domain-specific languages in Haskell.</p>
+    </main>
+    <footer>
+      <hr>
+      <p><small>© Phil Freeman 2018</small></p>
+    </footer>
+  </body>
+</html>
